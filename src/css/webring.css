@@ -14,106 +14,111 @@
     color: var(--color);
 }
 
-.webring-section-title {
-    font-size: var(--text-xl);
-    font-weight: 400;
-    margin-top: 1rem;
-    margin-bottom: 0.75rem;
-    padding-bottom: 0;
-    border-bottom: none;
-    text-decoration: underline;
-    text-decoration-color: var(--accent, #FF914D);
-}
-
-.webring-sites-grid {
-    display: block;
-    gap: 0;
+.webring-group-title {
+    margin-top: 2rem;
     margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color);
+    border-bottom: 2px solid var(--accent, #FF914D);
+    padding-bottom: 0.5rem;
 }
 
-.webring-site-card {
-    padding: 0;
-    border: none;
-    border-bottom: none;
-    border-radius: 0;
+.webring-group-title:first-of-type {
+    margin-top: 0;
+}
+
+/* Enhanced Grid Layout */
+.webring-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
+.webring-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--accent, #FF914D);
+    border-radius: 12px;
+    padding: 1rem;
     background-color: transparent;
-    transition: none;
-    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 145, 77, 0.1);
+    gap: 0.6rem;
+    min-height: 140px;
 }
 
-.webring-site-card:hover {
-    box-shadow: none;
-    border-color: transparent;
+.webring-card:hover {
+    border-color: var(--accent, #FF914D);
+    box-shadow: 0 6px 16px rgba(255, 145, 77, 0.2);
+    transform: translateY(-3px);
 }
 
-.webring-site-title {
-    font-size: var(--text-base);
-    font-weight: 400;
-    margin: 0 0 0.25rem 0;
-    color: var(--color);
+.webring-card-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
     text-decoration: none;
+    color: inherit;
 }
 
-.webring-site-info {
-    margin-bottom: 0.25rem;
+.webring-card-content {
+    display: none;
 }
 
-.webring-site-info label {
-    font-weight: 400;
-    display: inline;
-    font-size: var(--text-base);
-    color: rgba(100, 100, 100, 1);
-    margin-bottom: 0;
-    margin-right: 0.25rem;
+.webring-card-text {
+    display: none;
 }
 
-.webring-site-info a {
-    color: var(--color);
-    text-decoration: none;
-    word-break: break-all;
-    font-size: var(--text-base);
-}
-
-.webring-site-info a:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--accent, #FF914D);
-}
-
-.webring-feeds-list {
-    list-style: none;
-    padding: 0;
-    margin: 0.25rem 0;
-    display: inline;
-}
-
-.webring-feeds-list li {
+.webring-card-title {
     margin: 0;
-    padding-left: 0;
-    position: relative;
-    display: inline;
-}
-
-.webring-feeds-list li:before {
-    content: '';
-}
-
-.webring-feeds-list a {
+    font-size: 1rem;
+    font-weight: 600;
     color: var(--color);
-    text-decoration: none;
-    font-size: var(--text-base);
+    line-height: 1.2;
 }
 
-.webring-feeds-list a:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--accent, #FF914D);
-}
-
-.webring-empty-feeds {
-    font-size: var(--text-base);
-    color: rgba(150, 150, 150, 1);
-    font-style: italic;
+.webring-card-url {
     margin: 0;
-    display: inline;
+    font-size: 0.8rem;
+    color: var(--accent, #FF914D);
+    word-break: break-word;
+    font-family: monospace;
+    line-height: 1.2;
+}
+
+.webring-feeds {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.webring-feed-badge {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    background-color: rgba(255, 145, 77, 0.1);
+    border: 1px solid var(--accent, #FF914D);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: var(--accent, #FF914D);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    width: fit-content;
+}
+
+.webring-feed-badge:hover {
+    background-color: var(--accent, #FF914D);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .webring-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 
 .webring-nav-section {

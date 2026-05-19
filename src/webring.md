@@ -9,17 +9,29 @@ Welcome to the Homebrew Webring! This is a collection of FOSS communities and si
 
 ## What is a Webring?
 
-A webring is a collection of websites linked together in a circular structure, allowing visitors to navigate from one site to the next. It's a way to discover and explore related communities and projects.
+> *A webring is a collection of websites linked together in a circular structure, allowing visitors to navigate from one site to the next. It's a way to discover and explore related communities and projects.*
 
 ## Sites in the Ring
 
-{%- for site in sites.ring %}
-**{{ site.title }}** | [{{ site.url }}]({{ site.url }})
-{%- if site.blog and site.blog.length > 0 %}
-{%- for feed in site.blog %} | [{{ feed.title }}]({{ feed.url }}){% endfor %}
-{%- else %} | No blog feeds
-{%- endif %}
-
+{%- for group in sites.ring %}
+<h3 class="webring-group-title">{{ group.org }}</h3>
+<div class="webring-grid">
+{%- for site in group.sites %}
+<div class="webring-card">
+  <a href="{{ site.url }}" class="webring-card-link" target="_blank" rel="noopener noreferrer">
+    <h4 class="webring-card-title">{{ site.title }}</h4>
+    <p class="webring-card-url">{{ site.url }}</p>
+  </a>
+  {%- if site.blog and site.blog.length > 0 %}
+  <div class="webring-feeds">
+    {%- for feed in site.blog %}
+    <a href="{{ feed.url }}" class="webring-feed-badge" target="_blank" rel="noopener noreferrer">{{ feed.title }}</a>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+</div>
+{% endfor %}
+</div>
 {% endfor %}
 
 

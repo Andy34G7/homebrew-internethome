@@ -10,7 +10,7 @@
   "defaultSocialImage": "/images/nav-logo.png",
   "headerLinks": [
     {
-      "text": "Home",
+      "text": "HSP",
       "url": "https://hsp-ec.xyz",
       "external": true
     },
@@ -40,7 +40,7 @@
       "external": true
     },
     {
-      "text": "Code of Conduct",
+      "text": "Conduct",
       "url": "/conduct",
       "external": false
     },

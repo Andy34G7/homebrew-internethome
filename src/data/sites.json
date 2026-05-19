@@ -1,34 +1,39 @@
 {
     "ring": [
         {
-            "name": "homebrew",
-            "url": "https://homebrew.hsp-ec.xyz",
-            "title": "Homebrew FOSS",
-            "blog": [
+            "sites": [
                 {
-                    "title": "Homebrew Blog",
-                    "url": "https://homebrew.hsp-ec.xyz/feed.xml"
-                }
-            ]
-        },
-        {
-            "name": "hsp",
-            "url": "https://hsp-ec.xyz",
-            "title": "HSP PESUECC",
-            "blog": []
-        },
-        {
-            "name": "polarhive.net",
-            "url": "https://polarhive.net",
-            "title": "Nathan's internet home",
-            "blog": [
-                {
-                    "title": "Nathan's Blog",
-                    "url": "https://polarhive.net/blog/index.xml"
+                    "name": "homebrew",
+                    "url": "https://homebrew.hsp-ec.xyz",
+                    "title": "Homebrew FOSS",
+                    "blog": [
+                        {
+                            "title": "Homebrew Blog",
+                            "url": "https://homebrew.hsp-ec.xyz/feed.xml"
+                        }
+                    ]
                 },
                 {
-                    "title": "Nathan's wiki",
-                    "url": "https://wiki.polarhive.net/index.xml"
+                    "name": "hsp",
+                    "url": "https://hsp-ec.xyz",
+                    "title": "HSP PESUECC",
+                    "blog": []
+                },
+                {
+                    "name": "polarhive.net",
+                    "url": "https://polarhive.net",
+                    "title": "Nathan's internet home",
+                    "favicon": "https://polarhive.net/assets/favicon.svg",
+                    "blog": [
+                        {
+                            "title": "Nathan's Blog",
+                            "url": "https://polarhive.net/blog/index.xml"
+                        },
+                        {
+                            "title": "Nathan's wiki",
+                            "url": "https://wiki.polarhive.net/index.xml"
+                        }
+                    ]
                 }
             ]
         }
