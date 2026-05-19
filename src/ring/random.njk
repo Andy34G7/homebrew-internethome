@@ -1,0 +1,32 @@
+---
+permalink: /ring/random/index.html
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homebrew Webring - Random Site</title>
+</head>
+<body>
+    <script>
+        const sites = {{ sites.ring | dump | safe }};
+        const currentUrl = new URLSearchParams(window.location.search).get('site') || '';
+        
+        function getRandomSite() {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * sites.length);
+            } while (sites[randomIndex].url === currentUrl && sites.length > 1);
+            return sites[randomIndex];
+        }
+        
+        const targetSite = getRandomSite();
+        if (targetSite) {
+            window.location.href = targetSite.url;
+        }
+    </script>
+    <p><a href="/">Back to Homebrew</a></p>
+</body>
+</html>

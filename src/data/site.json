@@ -1,11 +1,11 @@
 {
   "name": "Homebrew | HSP PESUECC",
-  "description": "Homebrew is the destination FOSS community in PESU University created and managed by HSP PESUECC",
+  "description": "Homebrew is the FOSS Wing of HSP-PESUECC",
   "url": "https://homebrew.hsp-ec.xyz",
   "author": {
-    "name": "Hackerspace PESUECC",
-    "email": "hackerspace.ecc@pes.edu",
-    "twitterHandle": "author_handle"
+    "name": "HSP PESUECC",
+    "email": "mail@hsp-ec.xyz",
+    "twitterHandle": "hsp_ecc"
   },
   "defaultSocialImage": "/images/nav-logo.png",
   "headerLinks": [
@@ -42,6 +42,11 @@
     {
       "text": "Code of Conduct",
       "url": "/conduct",
+      "external": false
+    },
+    {
+      "text": "Webring",
+      "url": "/webring",
       "external": false
     }
   ],

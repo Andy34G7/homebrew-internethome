@@ -1,0 +1,190 @@
+/* Webring Styles */
+.webring-intro {
+    margin-bottom: 1rem;
+    padding: 0;
+    background-color: transparent;
+    border-left: none;
+    border-radius: 0;
+}
+
+.webring-intro p {
+    margin: 0;
+    font-size: var(--text-base);
+    line-height: 1.54;
+    color: var(--color);
+}
+
+.webring-section-title {
+    font-size: var(--text-xl);
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0;
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration-color: var(--accent, #FF914D);
+}
+
+.webring-sites-grid {
+    display: block;
+    gap: 0;
+    margin-bottom: 1rem;
+}
+
+.webring-site-card {
+    padding: 0;
+    border: none;
+    border-bottom: none;
+    border-radius: 0;
+    background-color: transparent;
+    transition: none;
+    margin-bottom: 0.5rem;
+}
+
+.webring-site-card:hover {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.webring-site-title {
+    font-size: var(--text-base);
+    font-weight: 400;
+    margin: 0 0 0.25rem 0;
+    color: var(--color);
+    text-decoration: none;
+}
+
+.webring-site-info {
+    margin-bottom: 0.25rem;
+}
+
+.webring-site-info label {
+    font-weight: 400;
+    display: inline;
+    font-size: var(--text-base);
+    color: rgba(100, 100, 100, 1);
+    margin-bottom: 0;
+    margin-right: 0.25rem;
+}
+
+.webring-site-info a {
+    color: var(--color);
+    text-decoration: none;
+    word-break: break-all;
+    font-size: var(--text-base);
+}
+
+.webring-site-info a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent, #FF914D);
+}
+
+.webring-feeds-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem 0;
+    display: inline;
+}
+
+.webring-feeds-list li {
+    margin: 0;
+    padding-left: 0;
+    position: relative;
+    display: inline;
+}
+
+.webring-feeds-list li:before {
+    content: '';
+}
+
+.webring-feeds-list a {
+    color: var(--color);
+    text-decoration: none;
+    font-size: var(--text-base);
+}
+
+.webring-feeds-list a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent, #FF914D);
+}
+
+.webring-empty-feeds {
+    font-size: var(--text-base);
+    color: rgba(150, 150, 150, 1);
+    font-style: italic;
+    margin: 0;
+    display: inline;
+}
+
+.webring-nav-section {
+    background-color: transparent;
+    padding: 1rem 0;
+    border-radius: 0;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.webring-nav-section h2 {
+    text-align: center;
+    margin: 0 0 0.75rem 0;
+    font-size: var(--text-xl);
+}
+
+.webring-nav-links {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+
+.webring-nav-links a {
+    padding: 0.4rem 0.8rem;
+    background-color: transparent;
+    color: var(--color);
+    border: 1px solid var(--accent, #FF914D);
+    border-radius: 0;
+    text-decoration: none;
+    transition: none;
+    font-weight: 400;
+    font-size: var(--text-base);
+}
+
+.webring-nav-links a:hover {
+    background-color: var(--accent, #FF914D);
+    color: white;
+    border-color: var(--accent, #FF914D);
+}
+
+.webring-add-section {
+    background-color: transparent;
+    border: none;
+    border-top: none;
+    border-radius: 0;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.webring-add-section h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--color);
+    text-decoration: underline;
+    text-decoration-color: var(--accent, #FF914D);
+    font-size: var(--text-lg);
+}
+
+.webring-add-section ol {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.webring-add-section li {
+    margin: 0.25rem 0;
+    font-size: var(--text-base);
+}
+
+.webring-add-section p {
+    margin: 0.5rem 0;
+    font-size: var(--text-base);
+}
