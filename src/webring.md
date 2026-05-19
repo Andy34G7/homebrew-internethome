@@ -12,17 +12,24 @@ Welcome to the Homebrew Webring! This is a collection of FOSS communities and si
 > *A webring is a collection of websites linked together in a circular structure, allowing visitors to navigate from one site to the next. It's a way to discover and explore related communities and projects.*
 
 ## Sites in the Ring
-
+  
 {%- for group in sites.ring %}
 <h3 class="webring-group-title">{{ group.org }}</h3>
 <div class="webring-grid">
 {%- for site in group.sites %}
 <div class="webring-card">
   <a href="{{ site.url }}" class="webring-card-link" target="_blank" rel="noopener noreferrer">
-    <h4 class="webring-card-title">{{ site.title }}</h4>
-    <p class="webring-card-url">{{ site.url }}</p>
+    <div class="webring-card-header">
+      {%- if site.favicon %}
+      <img class="webring-favicon" src="{{ site.favicon }}" alt="" width="16" height="16" onerror="this.style.display='none'" />
+      {%- else %}
+      <img class="webring-favicon" src="https://www.google.com/s2/favicons?domain={{ site.url }}&sz=32" alt="" width="16" height="16" onerror="this.style.display='none'" />
+      {%- endif %}
+      <h4 class="webring-card-title">{{ site.title }}</h4>
+    </div>
+    <p class="webring-card-url">{{ site.url | remove: 'https://' | remove: 'http://' }}</p>
   </a>
-  {%- if site.blog and site.blog.length > 0 %}
+  {%- if site.blog and site.blog.size > 0 %}
   <div class="webring-feeds">
     {%- for feed in site.blog %}
     <a href="{{ feed.url }}" class="webring-feed-badge" target="_blank" rel="noopener noreferrer">{{ feed.title }}</a>
@@ -33,7 +40,6 @@ Welcome to the Homebrew Webring! This is a collection of FOSS communities and si
 {% endfor %}
 </div>
 {% endfor %}
-
 
 ## Want to Join the Webring?
 
